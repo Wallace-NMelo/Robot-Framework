@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.3 on linux)" generated="2024-01-21T15:49:08.423514" rpa="false" schemaversion="5">
+<suite id="s1" name="RobotFr" source="/home/wallacen/Projects/RobotFr">
+<suite id="s1-s1" name="Tests" source="/home/wallacen/Projects/RobotFr/Tests">
+<suite id="s1-s1-s1" name="TestCase1" source="/home/wallacen/Projects/RobotFr/Tests/TestCase1.robot">
+<test id="s1-s1-s1-t1" name="MyFirstTest" line="24">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-21T15:49:08.650475" level="INFO">Hello World...</msg>
+<arg>Hello World...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-21T15:49:08.648918" elapsed="0.002530"/>
+</kw>
+<status status="PASS" start="2024-01-21T15:49:08.646439" elapsed="0.006407"/>
+</test>
+<test id="s1-s1-s1-t2" name="Open Browser" line="30">
+<kw name="open the browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-21T15:49:08.657643" level="INFO">Opening browser 'Chrome' to base url 'http://www.google.com'.</msg>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-21T15:49:08.656978" elapsed="3.535693"/>
+</kw>
+<status status="PASS" start="2024-01-21T15:49:08.656069" elapsed="3.537305"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-01-21T15:49:12.193973" elapsed="0.002790"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-21T15:49:12.197518" elapsed="0.074842"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-21T15:49:12.274482" level="INFO">Test Complement</msg>
+<arg>Test Complement</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-21T15:49:12.273703" elapsed="0.001229"/>
+</kw>
+<status status="PASS" start="2024-01-21T15:49:08.654734" elapsed="3.621194"/>
+</test>
+<test id="s1-s1-s1-t3" name="Search on google" line="36">
+<kw name="search topic">
+<kw name="open the browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-21T15:49:12.286884" level="INFO">Opening browser 'Chrome' to base url 'http://www.google.com'.</msg>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-21T15:49:12.284977" elapsed="3.326821"/>
+</kw>
+<status status="PASS" start="2024-01-21T15:49:12.282550" elapsed="3.329580"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-21T15:49:15.613457" level="INFO">Typing text 'Automation' into text field 'name=q'.</msg>
+<arg>name=q</arg>
+<arg>${topic}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-21T15:49:15.612430" elapsed="0.176512"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-01-21T15:49:15.791136" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
+<msg time="2024-01-21T15:49:16.141272" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-01-21T15:49:16.141596" level="INFO">Releasing special key ENTER.</msg>
+<arg>name=q</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-01-21T15:49:15.790082" elapsed="5.678785"/>
+</kw>
+<arg>Automation</arg>
+<status status="PASS" start="2024-01-21T15:49:12.280339" elapsed="9.189592"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-01-21T15:49:21.470819" elapsed="0.003547"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-21T15:49:21.475482" elapsed="0.081187"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-21T15:49:21.558489" level="INFO">Test Complement</msg>
+<arg>Test Complement</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-21T15:49:21.557952" elapsed="0.000981"/>
+</kw>
+<status status="PASS" start="2024-01-21T15:49:12.278062" elapsed="9.282078"/>
+</test>
+<doc>Simple example using SeleniumLibrary.</doc>
+<status status="PASS" start="2024-01-21T15:49:08.471678" elapsed="13.090791"/>
+</suite>
+<status status="PASS" start="2024-01-21T15:49:08.467562" elapsed="13.096638"/>
+</suite>
+<status status="PASS" start="2024-01-21T15:49:08.435617" elapsed="13.131429"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="RobotFr">RobotFr</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Tests">RobotFr.Tests</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="TestCase1">RobotFr.Tests.TestCase1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.3 on linux)" generated="2024-01-20T19:10:35.705295" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="/home/wallacen/Projects/RobotFr/Tests/Login.robot">
+<test id="s1-t1" name="Test some basics of my calculator application" line="5">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Starting test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-01-20T19:10:35.752311" elapsed="0.001474"/>
+</kw>
+<kw name="Verify app calculation">
+<msg time="2024-01-20T19:10:35.756079" level="FAIL">No keyword with name 'Verify app calculation' found.</msg>
+<arg>1 + 1</arg>
+<arg>2</arg>
+<status status="FAIL" start="2024-01-20T19:10:35.755747" elapsed="0.001814">No keyword with name 'Verify app calculation' found.</status>
+</kw>
+<kw name="Verify app calculation">
+<arg>14 + 8</arg>
+<arg>22</arg>
+<status status="NOT RUN" start="2024-01-20T19:10:35.759203" elapsed="0.000281"/>
+</kw>
+<kw name="Verify app calculation">
+<arg>14 - 8</arg>
+<arg>6</arg>
+<status status="NOT RUN" start="2024-01-20T19:10:35.761274" elapsed="0.000410"/>
+</kw>
+<kw name="Verify app calculation">
+<arg>8 - 14</arg>
+<arg>-6</arg>
+<status status="NOT RUN" start="2024-01-20T19:10:35.764153" elapsed="0.000302"/>
+</kw>
+<kw name="Verify app calculation">
+<arg>8 * 14</arg>
+<arg>112</arg>
+<status status="NOT RUN" start="2024-01-20T19:10:35.765939" elapsed="0.000254"/>
+</kw>
+<kw name="Verify app calculation">
+<arg>14 / 8</arg>
+<arg>1.75</arg>
+<status status="NOT RUN" start="2024-01-20T19:10:35.767815" elapsed="0.000288"/>
+</kw>
+<kw name="Verify app calculation">
+<arg>4 + 8 * 2 / 4</arg>
+<arg>8</arg>
+<status status="NOT RUN" start="2024-01-20T19:10:35.769779" elapsed="0.000403"/>
+</kw>
+<kw name="Verify app calculation">
+<arg>(4 + 8) * 2 / 4</arg>
+<arg>6</arg>
+<status status="NOT RUN" start="2024-01-20T19:10:35.771801" elapsed="0.000220"/>
+</kw>
+<status status="FAIL" start="2024-01-20T19:10:35.751202" elapsed="0.021231">No keyword with name 'Verify app calculation' found.</status>
+</test>
+<status status="FAIL" start="2024-01-20T19:10:35.707689" elapsed="0.066471"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
