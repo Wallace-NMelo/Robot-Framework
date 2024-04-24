@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-04-09T20:17:29.605354" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot Framework" source="/home/wmelo/Robot_Framework">
+<suite id="s1-s1" name="WEBTESTING" source="/home/wmelo/Robot_Framework/WEBTESTING">
+<suite id="s1-s1-s1" name="Amazon Testes" source="/home/wmelo/Robot_Framework/WEBTESTING/amazon_testes.robot">
+<test id="s1-s1-s1-t1" name="Caso de Teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="12">
+<kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-09T20:17:29.701123" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-09T20:17:29.700851" elapsed="0.543522"/>
+</kw>
+<status status="PASS" start="2024-04-09T20:17:29.700147" elapsed="0.544425"/>
+</kw>
+<kw name="Acessa a home page do site Amazon.com.br" owner="amazon_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-04-09T20:17:30.245419" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<arg>url=${AMAZON_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-04-09T20:17:30.245190" elapsed="1.422998"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-09T20:17:31.668468" elapsed="0.102434"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${AMAZON_LOGO_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-09T20:17:31.771160" elapsed="0.021348"/>
+</kw>
+<status status="PASS" start="2024-04-09T20:17:30.244847" elapsed="1.548459"/>
+</kw>
+<kw name="Entrar no menu &quot;Eletrônicos&quot;" owner="amazon_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${MENU_ELETRONICO_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-09T20:17:31.794806" elapsed="0.045820"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-09T20:17:31.842138" level="INFO">Clicking element '(//a[contains(.,'Eletrônicos')])[1]'.</msg>
+<arg>locator=${MENU_ELETRONICO_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-09T20:17:31.841341" elapsed="1.505408"/>
+</kw>
+<status status="PASS" start="2024-04-09T20:17:31.793910" elapsed="1.553148"/>
+</kw>
+<kw name="Fechar o navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-09T20:17:33.347959" elapsed="0.072599"/>
+</kw>
+<status status="PASS" start="2024-04-09T20:17:33.347559" elapsed="0.073336"/>
+</kw>
+<doc>Esse teste verifica o menu eletrônicos do site da Amazon.com.br
+e verifica a categoria Computadores e Informática</doc>
+<tag>Menus</tag>
+<status status="PASS" start="2024-04-09T20:17:29.698889" elapsed="3.722242"/>
+</test>
+<test id="s1-s1-s1-t2" name="Caso de Teste 02 - Pesquisa de Produto" line="27">
+<kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-09T20:17:33.423644" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-09T20:17:33.423312" elapsed="0.557267"/>
+</kw>
+<status status="PASS" start="2024-04-09T20:17:33.422773" elapsed="0.558036"/>
+</kw>
+<kw name="Acessa a home page do site Amazon.com.br" owner="amazon_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-04-09T20:17:33.981857" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<arg>url=${AMAZON_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-04-09T20:17:33.981605" elapsed="1.619979"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-09T20:17:35.601941" elapsed="0.105493"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${AMAZON_LOGO_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-09T20:17:35.707743" elapsed="0.029864"/>
+</kw>
+<status status="PASS" start="2024-04-09T20:17:33.981159" elapsed="1.756845"/>
+</kw>
+<kw name="Digitar o nome do produto &quot;Playstation 5&quot; no campo de pesquisa" owner="amazon_resources" source_name="Digitar o nome do produto &quot;${PRODUTO}&quot; no campo de pesquisa">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-09T20:17:35.739667" level="INFO">Typing text 'Playstation 5' into text field 'twotabsearchtextbox'.</msg>
+<arg>locator=twotabsearchtextbox</arg>
+<arg>text=${PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-09T20:17:35.739143" elapsed="0.170923"/>
+</kw>
+<status status="PASS" start="2024-04-09T20:17:35.738503" elapsed="0.172183"/>
+</kw>
+<kw name="Clickar no Botão de pesquisa" owner="amazon_resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-09T20:17:35.912752" level="INFO">Clicking button 'nav-search-submit-button'.</msg>
+<arg>locator=nav-search-submit-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-09T20:17:35.912297" elapsed="2.768070"/>
+</kw>
+<status status="PASS" start="2024-04-09T20:17:35.911395" elapsed="2.769307"/>
+</kw>
+<kw name="Verificar se o resultado da pesquisa listou &quot;PlayStation®5 Slim Edição Digital&quot;" owner="amazon_resources" source_name="Verificar se o resultado da pesquisa listou &quot;${PRODUTO}&quot;">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-04-09T20:17:38.889844" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-09T20:17:38.890117" level="FAIL">JavascriptException: Message: javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression (//span[contains(.,\"PlayStation®5 Slim Edição Digital\"\")])[3] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '(//span[contains(.,\"PlayStation®5 Slim Edição Digital\"\")])[3]' is not a valid XPath expression."}
+  (Session info: chrome=123.0.6312.86)
+Stacktrace:
+#0 0x5a327db66873 &lt;unknown&gt;
+#1 0x5a327d85c8c6 &lt;unknown&gt;
+#2 0x5a327d861e75 &lt;unknown&gt;
+#3 0x5a327d863bce &lt;unknown&gt;
+#4 0x5a327d863c5c &lt;unknown&gt;
+#5 0x5a327d8a7325 &lt;unknown&gt;
+#6 0x5a327d8a76d1 &lt;unknown&gt;
+#7 0x5a327d8ea781 &lt;unknown&gt;
+#8 0x5a327d8c95cd &lt;unknown&gt;
+#9 0x5a327d8e7c19 &lt;unknown&gt;
+#10 0x5a327d8c9343 &lt;unknown&gt;
+#11 0x5a327d89a593 &lt;unknown&gt;
+#12 0x5a327d89af5e &lt;unknown&gt;
+#13 0x5a327db2a85b &lt;unknown&gt;
+#14 0x5a327db2e7b5 &lt;unknown&gt;
+#15 0x5a327db18581 &lt;unknown&gt;
+#16 0x5a327db2f342 &lt;unknown&gt;
+#17 0x5a327dafd88f &lt;unknown&gt;
+#18 0x5a327db55738 &lt;unknown&gt;
+#19 0x5a327db5590b &lt;unknown&gt;
+#20 0x5a327db659c4 &lt;unknown&gt;
+#21 0x7e1e21294ac3 &lt;unknown&gt;
+</msg>
+<arg>locator=(//span[contains(.,"${PRODUTO}"")])[3]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-04-09T20:17:38.681572" elapsed="0.210181">JavascriptException: Message: javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression (//span[contains(.,\"PlayStation®5 Slim Edição Digital\"\")])[3] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '(//span[contains(.,\"PlayStation®5 Slim Edição Digital\"\")])[3]' is not a valid XPath expression."}
+  (Session info: chrome=123.0.6312.86)
+Stacktrace:
+#0 0x5a327db66873 &lt;unknown&gt;
+#1 0x5a327d85c8c6 &lt;unknown&gt;
+#2 0x5a327d861e75 &lt;unknown&gt;
+#3 0x5a327d863bce &lt;unknown&gt;
+#4 0x5a327d863c5c &lt;unknown&gt;
+#5 0x5a327d8a7325 &lt;unknown&gt;
+#6 0x5a327d8a76d1 &lt;unknown&gt;
+#7 0x5a327d8ea781 &lt;unknown&gt;
+#8 0x5a327d8c95cd &lt;unknown&gt;
+#9 0x5a327d8e7c19 &lt;unknown&gt;
+#10 0x5a327d8c9343 &lt;unknown&gt;
+#11 0x5a327d89a593 &lt;unknown&gt;
+#12 0x5a327d89af5e &lt;unknown&gt;
+#13 0x5a327db2a85b &lt;unknown&gt;
+#14 0x5a327db2e7b5 &lt;unknown&gt;
+#15 0x5a327db18581 &lt;unknown&gt;
+#16 0x5a327db2f342 &lt;unknown&gt;
+#17 0x5a327dafd88f &lt;unknown&gt;
+#18 0x5a327db55738 &lt;unknown&gt;
+#19 0x5a327db5590b &lt;unknown&gt;
+#20 0x5a327db659c4 &lt;unknown&gt;
+#21 0x7e1e21294ac3 &lt;unknown&gt;
+</status>
+</kw>
+<status status="FAIL" start="2024-04-09T20:17:38.681140" elapsed="0.210955">JavascriptException: Message: javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression (//span[contains(.,\"PlayStation®5 Slim Edição Digital\"\")])[3] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '(//span[contains(.,\"PlayStation®5 Slim Edição Digital\"\")])[3]' is not a valid XPath expression."}
+  (Session info: chrome=123.0.6312.86)
+Stacktrace:
+#0 0x5a327db66873 &lt;unknown&gt;
+#1 0x5a327d85c8c6 &lt;unknown&gt;
+#2 0x5a327d861e75 &lt;unknown&gt;
+#3 0x5a327d863bce &lt;unknown&gt;
+#4 0x5a327d863c5c &lt;unknown&gt;
+#5 0x5a327d8a7325 &lt;unknown&gt;
+#6 0x5a327d8a76d1 &lt;unknown&gt;
+#7 0x5a327d8ea781 &lt;unknown&gt;
+#8 0x5a327d8c95cd &lt;unknown&gt;
+#9 0x5a327d8e7c19 &lt;unknown&gt;
+#10 0x5a327d8c9343 &lt;unknown&gt;
+#11 0x5a327d89a593 &lt;unknown&gt;
+#12 0x5a327d89af5e &lt;unknown&gt;
+#13 0x5a327db2a85b &lt;unknown&gt;
+#14 0x5a327db2e7b5 &lt;unknown&gt;
+#15 0x5a327db18581 &lt;unknown&gt;
+#16 0x5a327db2f342 &lt;unknown&gt;
+#17 0x5a327dafd88f &lt;unknown&gt;
+#18 0x5a327db55738 &lt;unknown&gt;
+#19 0x5a327db5590b &lt;unknown&gt;
+#20 0x5a327db659c4 &lt;unknown&gt;
+#21 0x7e1e21294ac3 &lt;unknown&gt;
+</status>
+</kw>
+<kw name="Fechar o navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-09T20:17:38.893377" elapsed="0.070127"/>
+</kw>
+<status status="PASS" start="2024-04-09T20:17:38.892578" elapsed="0.071232"/>
+</kw>
+<doc>Esse teste verifica a busca de um produto</doc>
+<tag>Buscar produtos</tag>
+<status status="FAIL" start="2024-04-09T20:17:33.421943" elapsed="5.542076">JavascriptException: Message: javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression (//span[contains(.,\"PlayStation®5 Slim Edição Digital\"\")])[3] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '(//span[contains(.,\"PlayStation®5 Slim Edição Digital\"\")])[3]' is not a valid XPath expression."}
+  (Session info: chrome=123.0.6312.86)
+Stacktrace:
+#0 0x5a327db66873 &lt;unknown&gt;
+#1 0x5a327d85c8c6 &lt;unknown&gt;
+#2 0x5a327d861e75 &lt;unknown&gt;
+#3 0x5a327d863bce &lt;unknown&gt;
+#4 0x5a327d863c5c &lt;unknown&gt;
+#5 0x5a327d8a7325 &lt;unknown&gt;
+#6 0x5a327d8a76d1 &lt;unknown&gt;
+#7 0x5a327d8ea781 &lt;unknown&gt;
+#8 0x5a327d8c95cd &lt;unknown&gt;
+#9 0x5a327d8e7c19 &lt;unknown&gt;
+#10 0x5a327d8c9343 &lt;unknown&gt;
+#11 0x5a327d89a593 &lt;unknown&gt;
+#12 0x5a327d89af5e &lt;unknown&gt;
+#13 0x5a327db2a85b &lt;unknown&gt;
+#14 0x5a327db2e7b5 &lt;unknown&gt;
+#15 0x5a327db18581 &lt;unknown&gt;
+#16 0x5a327db2f342 &lt;unknown&gt;
+#17 0x5a327dafd88f &lt;unknown&gt;
+#18 0x5a327db55738 &lt;unknown&gt;
+#19 0x5a327db5590b &lt;unknown&gt;
+#20 0x5a327db659c4 &lt;unknown&gt;
+#21 0x7e1e21294ac3 &lt;unknown&gt;
+</status>
+</test>
+<doc>Essa suite testa o site da Amazon.com.br</doc>
+<status status="FAIL" start="2024-04-09T20:17:29.623408" elapsed="9.342232"/>
+</suite>
+<status status="FAIL" start="2024-04-09T20:17:29.621831" elapsed="9.345605"/>
+</suite>
+<status status="FAIL" start="2024-04-09T20:17:29.607746" elapsed="9.360667"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Buscar produtos</stat>
+<stat pass="1" fail="0" skip="0">Menus</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Robot Framework">Robot Framework</stat>
+<stat pass="1" fail="1" skip="0" id="s1-s1" name="WEBTESTING">Robot Framework.WEBTESTING</stat>
+<stat pass="1" fail="1" skip="0" id="s1-s1-s1" name="Amazon Testes">Robot Framework.WEBTESTING.Amazon Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
